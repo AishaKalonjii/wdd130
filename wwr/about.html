@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about our whitewater rafting company's history, mission, and the adventures that await you on the river.">
+    <meta name="author" content="Your Full Name">
+    <title>About Us - Whitewater Rafting Adventures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<style>
+    /* Basic styling to match the wireframe structure */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav li {
+        margin-left: 1.5rem;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #0077cc;
+    }
+
+    .hero {
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero article {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 1rem;
+        max-width: 400px;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero article img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        margin-right: 1rem;
+        border-radius: 50%;
+    }
+
+    main {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    section {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        margin-bottom: 1rem;
+        color: #0077cc;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    footer p {
+        margin-bottom: 1rem;
+    }
+
+    .socialmedia {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .socialmedia a img {
+        width: 32px;
+        height: 32px;
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <!-- Logo image - replace with your actual logo -->
+        <img src="images/logo.png" alt="Whitewater Rafting Company Logo" class="logo">
+
+        <!-- Navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <!-- Hero background image -->
+            <img src="images/hero-rafting.jpg" alt="Whitewater rafting adventure" class="hero-image">
+
+            <!-- Main heading -->
+            <h1>Whitewater Rafting Adventures</h1>
+
+            <!-- Article with happy client/employee and company purpose -->
+            <article>
+                <img src="images/happy-client.jpg" alt="Happy rafting client">
+                <p>Our mission is to provide safe, exciting, and memorable whitewater rafting experiences for
+                    adventurers of all skill levels. We believe in the transformative power of nature and adventure.</p>
+            </article>
+        </div>
+
+        <!-- History section -->
+        <section>
+            <h2>History</h2>
+            <p>Founded in 1995 by river enthusiasts John and Sarah Waters, our company started with just two rafts and a
+                passion for sharing the thrill of whitewater. Over the years, we've grown to become one of the region's
+                most trusted rafting outfitters, introducing thousands to the joys of river adventure while maintaining
+                our commitment to safety and environmental stewardship.</p>
+        </section>
+
+        <!-- Adventure section (empty for now) -->
+        <section>
+            <h2>Adventure Awaits You!</h2>
+            <!-- This section will be populated with images in the next assignment -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Copyright information -->
+        <p>&copy; 2023 Whitewater Rafting Adventures | Aisha Kalonji </p>
+
+        <!-- Social media links -->
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook Icon">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="LinkedIn Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram Icon">
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>

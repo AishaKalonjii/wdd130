@@ -1,0 +1,177 @@
+/* rafting.css */
+
+/* CSS Variables */
+:root {
+  --primary-color: #055a05; /* forest green */
+  --secondary-color: #f4a261; /* warm sand */
+  --accent1-color: #264653; /* dark slate blue */
+  --accent2-color: #e9c46a; /* light golden yellow */
+  --heading-font: "Times New Roman", "Georgia", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* Reset CSS box-model properties */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  line-height: 1.6;
+}
+
+/* Limit page width and center content */
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Heading styles */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Consistent margins and padding */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Remove underlines from social media links */
+.socialmedia a {
+  text-decoration: none;
+}
+
+/* Header specific styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  height: 60px;
+}
+
+/* Navigation styles */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--accent2-color);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+/* Hero section styles - UPDATED */
+.hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+/* Hero image styling */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Hero heading overlay */
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff; /* white text for contrast */
+  font-size: 2.5rem;
+  margin: 0; /* Remove default margins */
+}
+
+/* Hero article overlay */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  max-width: 400px;
+  margin: 0; /* Override the general article margin */
+}
+
+/* Hero article image styling */
+.hero article img {
+  float: right;
+  width: 125px;
+  height: auto;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Clearfix for the floated image */
+.hero article::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Main content styles */
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--accent1-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 1rem;
+}
+
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialmedia a img {
+  width: 32px;
+  height: 32px;
+}
