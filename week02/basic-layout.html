@@ -1,11 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>placeholder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Basic HTML Structure</title>
+    <meta name="description" content="A basic HTML structure example using semantic HTML elements">
+    <meta name="author" content="Aisha Kalonji">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        aside {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <img src="images/basic-logo.png" alt="HTML Layout Logo" width="128" height="128">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="https://byui.edu">BYU-Idaho</a></li>
+            <li><a href="https://churchofjesuschrist.org">The Church</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Basic HTML Structure</h1>
+
+        <section>
+            <h2>Heading</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, tenetur ...</p>
+        </section>
+
+        <section>
+            <h2>Heading</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, tenetur ...</p>
+        </section>
+    </main>
+
+    <aside>
+        <img src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/800x500/payson-utah-temple-celestial-room-1458545.jpg"
+            alt="Payson Utah Temple Celestial Room" width="200">
+    </aside>
+
+    <footer>
+        <p>🌴 Aisha Kalonji</p>
+    </footer>
 </body>
+
 </html>
