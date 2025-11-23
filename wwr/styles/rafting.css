@@ -1,5 +1,12 @@
 /* rafting.css */
 
+/* Universal Selector Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* CSS Variables */
 :root {
   --primary-color: #055a05;
@@ -8,13 +15,6 @@
   --accent2-color: #e9c46a;
   --heading-font: "Times New Roman", "Georgia", serif;
   --body-font: Arial, Helvetica, sans-serif;
-}
-
-/* Universal Selector Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 /* Body styles */
@@ -31,7 +31,7 @@ header, main, footer {
   padding: 0 20px;
 }
 
-/* Heading styles using CSS variables */
+/* Heading styles */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
@@ -76,7 +76,7 @@ nav, p, section, article {
 }
 
 .nav-links a:hover {
-  background-color: var(--accent2-color);
+  background-color: var(--secondary-color);
   color: white;
 }
 
@@ -109,7 +109,8 @@ nav, p, section, article {
   padding: 20px;
 }
 
-.hero-content {
+/* Hero article specific rules */
+.hero article {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -122,7 +123,7 @@ nav, p, section, article {
   gap: 1rem;
 }
 
-.hero-content img {
+.hero article img {
   float: right;
   width: 125px;
   height: 100px;
@@ -134,7 +135,7 @@ nav, p, section, article {
 }
 
 /* Clearfix for floated image */
-.hero-content::after {
+.hero article::after {
   content: "";
   display: table;
   clear: both;
@@ -293,7 +294,7 @@ footer {
     font-size: 2rem;
   }
   
-  .hero-content {
+  .hero article {
     position: relative;
     max-width: none;
     margin: 1rem;
