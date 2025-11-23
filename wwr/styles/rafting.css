@@ -1,11 +1,9 @@
-/* UNIVERSAL SELECTOR RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* CSS Variables */
 :root {
   --primary-color: #055a05;
   --secondary-color: #f4a261;
@@ -15,7 +13,6 @@
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Body styles */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
@@ -23,26 +20,22 @@ body {
   background-color: #fff;
 }
 
-/* Limit page width and center content */
 header, main, footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Heading styles */
 h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-/* Consistent margins and padding */
 nav, p, section, article {
   margin: 16px;
   padding: 8px;
 }
 
-/* Header with CSS Grid */
 .header-content {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -56,7 +49,6 @@ nav, p, section, article {
   width: auto;
 }
 
-/* Navigation with Flexbox */
 .nav-links {
   display: flex;
   list-style: none;
@@ -81,7 +73,6 @@ nav, p, section, article {
   transform: translateY(-2px);
 }
 
-/* Hero section styles */
 .hero {
   position: relative;
   height: 500px;
@@ -110,7 +101,6 @@ nav, p, section, article {
   padding: 20px;
 }
 
-/* Hero article specific rules */
 .hero article {
   position: absolute;
   bottom: 20px;
@@ -136,14 +126,12 @@ nav, p, section, article {
   margin-bottom: 0.5rem;
 }
 
-/* Clearfix for floated image */
 .hero article::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* History section with two-column layout */
 .history {
   margin: 3rem 0;
 }
@@ -182,7 +170,6 @@ nav, p, section, article {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Adventure section with image gallery */
 .adventure {
   margin: 3rem 0;
 }
@@ -226,7 +213,6 @@ nav, p, section, article {
   font-size: 0.9rem;
 }
 
-/* Footer with social media links */
 footer {
   background-color: var(--accent1-color);
   color: white;
@@ -265,7 +251,6 @@ footer {
   filter: brightness(0) invert(1);
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .header-content {
     grid-template-columns: 1fr;
