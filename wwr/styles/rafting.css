@@ -15,6 +15,8 @@
   --accent2-color: #e9c46a;
   --heading-font: "Times New Roman", "Georgia", serif;
   --body-font: Arial, Helvetica, sans-serif;
+  --white-color: #ffffff;
+  --black-color: #000000;
 }
 
 /* Body styles */
@@ -22,7 +24,7 @@ body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   line-height: 1.6;
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 /* Limit page width and center content */
@@ -74,12 +76,12 @@ nav, p, section, article {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: all 0.3s ease;
-  background-color: var(--accent2-color); /* USING --accent2-color HERE */
+  background-color: var(--accent2-color);
 }
 
 .nav-links a:hover {
   background-color: var(--secondary-color);
-  color: white;
+  color: var(--white-color);
   transform: translateY(-2px);
 }
 
@@ -103,7 +105,7 @@ nav, p, section, article {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--white-color);
   font-size: 3rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   text-align: center;
@@ -213,7 +215,7 @@ nav, p, section, article {
   object-fit: cover;
   border-radius: 8px;
   transition: all 0.3s ease;
-  border: 2px solid var(--accent2-color); /* USING --accent2-color HERE */
+  border: 2px solid var(--accent2-color);
 }
 
 .adventure-gallery img:hover {
@@ -231,7 +233,7 @@ nav, p, section, article {
 /* Footer with social media links */
 footer {
   background-color: var(--accent1-color);
-  color: white;
+  color: var(--white-color);
   padding: 2rem 0;
   margin-top: 3rem;
 }
