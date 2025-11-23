@@ -2,15 +2,15 @@
 
 /* CSS Variables */
 :root {
-  --primary-color: #055a05; /* forest green */
-  --secondary-color: #f4a261; /* warm sand */
-  --accent1-color: #264653; /* dark slate blue */
-  --accent2-color: #e9c46a; /* light golden yellow */
+  --primary-color: #055a05;
+  --secondary-color: #f4a261;
+  --accent1-color: #264653;
+  --accent2-color: #e9c46a;
   --heading-font: "Times New Roman", "Georgia", serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Reset CSS box-model properties */
+/* Universal Selector Reset */
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +29,18 @@ header, main, footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Heading styles using CSS variables */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Consistent margins and padding */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
 }
 
 /* Header with CSS Grid */
@@ -64,7 +76,7 @@ header, main, footer {
 }
 
 .nav-links a:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--accent2-color);
   color: white;
 }
 
@@ -93,6 +105,8 @@ header, main, footer {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   text-align: center;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
 }
 
 .hero-content {
@@ -109,11 +123,21 @@ header, main, footer {
 }
 
 .hero-content img {
-  width: 100px;
+  float: right;
+  width: 125px;
   height: 100px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 4px;
   border: 3px solid var(--primary-color);
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Clearfix for floated image */
+.hero-content::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* History section with two-column layout */
@@ -216,21 +240,21 @@ footer {
   font-size: 1rem;
 }
 
-.social-media {
+.socialmedia {
   display: flex;
   gap: 1rem;
 }
 
-.social-media a {
+.socialmedia a {
   text-decoration: none;
   transition: transform 0.3s ease;
 }
 
-.social-media a:hover {
+.socialmedia a:hover {
   transform: scale(1.1);
 }
 
-.social-media img {
+.socialmedia img {
   width: 32px;
   height: 32px;
   filter: brightness(0) invert(1);
