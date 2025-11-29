@@ -1,208 +1,540 @@
+/* rafting.css */
+
+/* UNIVERSAL SELECTOR RESET - MUST BE FIRST */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+  --primary-color: #055a05;
+  --secondary-color: #f4a261;
+  --accent1-color: #264653;
+  --accent2-color: #e9c46a;
+  --heading-font: "Times New Roman", "Georgia", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
+/* Body styles */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  line-height: 1.6;
+  background-color: var(--white-color);
+}
+
+/* Limit page width and center content */
+header, main, footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Heading styles */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* Consistent margins and padding */
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Header with CSS Grid */
+.header-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+/* Navigation with Flexbox */
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background-color: var(--accent2-color);
+}
+
+.nav-links a:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  transform: translateY(-2px);
+}
+
+/* Hero section styles */
+.hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white-color);
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+/* Hero article specific rules */
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent2-color);
+  padding: 1.5rem;
+  max-width: 400px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero article img {
+  float: right;
+  width: 125px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 3px solid var(--primary-color);
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Clearfix for floated image */
+.hero article::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* History section with two-column layout */
+.history {
+  margin: 3rem 0;
+}
+
+.history h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.history-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.history-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.history-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.history-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adventure section with image gallery */
+.adventure {
+  margin: 3rem 0;
+}
+
+.adventure h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.adventure-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.adventure-gallery figure {
+  margin: 0;
+  text-align: center;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent2-color);
+}
+
+.adventure-gallery img:hover {
+  transform: scale(1.05);
+  border-color: var(--secondary-color);
+}
+
+.adventure-gallery figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--accent1-color);
+  font-size: 0.9rem;
+}
+
+/* Footer with social media links */
+footer {
+  background-color: var(--accent1-color);
+  color: var(--white-color);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Footer Navigation Styles */
+footer nav.socialmedia {
+  display: flex;
+  gap: 1rem;
+}
+
+footer nav.socialmedia a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+footer nav.socialmedia a:hover {
+  transform: scale(1.1);
+}
+
+footer nav.socialmedia img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+
 /* Contact Page Specific Styles */
 
 /* Contact Information Section */
 .contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin: 2rem 0;
-    padding: 2rem;
-    background-color: var(--accent2-color);
-    border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: var(--accent2-color);
+  border-radius: 8px;
 }
 
 .company-details address {
-    font-style: normal;
-    line-height: 1.8;
+  font-style: normal;
+  line-height: 1.8;
 }
 
 .company-details strong {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .map-container {
-    width: 100%;
+  width: 100%;
 }
 
 .map-container iframe {
-    border-radius: 8px;
-    width: 100%;
-    height: 300px;
-    border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  border: 2px solid var(--primary-color);
 }
 
 /* Employee Profiles */
 .employees {
-    margin: 3rem 0;
-    text-align: center;
+  margin: 3rem 0;
+  text-align: center;
 }
 
 .employees h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
 }
 
 .employee-profiles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .employee-profiles figure {
-    margin: 0;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  margin: 0;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .employee-profiles figure:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .employee-profiles img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
 }
 
 .employee-profiles figcaption {
-    font-weight: bold;
-    color: var(--accent1-color);
-    font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent1-color);
+  font-size: 1.1rem;
 }
 
 /* Contact Form */
 .contact-form {
-    margin: 3rem 0;
-    padding: 2rem;
-    background-color: var(--accent2-color);
-    border-radius: 8px;
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: var(--accent2-color);
+  border-radius: 8px;
 }
 
 .contact-form h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: var(--accent1-color);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--accent1-color);
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 2px solid var(--primary-color);
-    border-radius: 4px;
-    font-size: 1rem;
-    font-family: var(--body-font);
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: var(--body-font);
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 5px rgba(244, 162, 97, 0.5);
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 5px rgba(244, 162, 97, 0.5);
 }
 
 fieldset {
-    border: 2px solid var(--primary-color);
-    border-radius: 4px;
-    padding: 1rem;
-    margin: 1.5rem 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1.5rem 0;
 }
 
 legend {
-    font-weight: bold;
-    color: var(--primary-color);
-    padding: 0 0.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 0 0.5rem;
 }
 
 .radio-group {
-    margin: 0.5rem 0;
-    display: flex;
-    align-items: center;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
 }
 
 .radio-group input[type="radio"] {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .checkbox-group {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .checkbox-group input[type="checkbox"] {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .submit-btn {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .submit-btn:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design for Contact Page */
+/* Responsive design */
 @media (max-width: 768px) {
-    .contact-info {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .employee-profiles {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .contact-form {
-        padding: 1rem;
-    }
-    
-    .radio-group {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .header-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .history-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .adventure-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero article {
+    position: relative;
+    max-width: none;
+    margin: 1rem;
+    bottom: auto;
+    right: auto;
+  }
+  
+  /* Contact Page Responsive */
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .employee-profiles {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-form {
+    padding: 1rem;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 480px) {
-    .contact-info,
-    .contact-form {
-        margin: 1rem 0;
-        padding: 1rem;
-    }
-    
-    .employee-profiles img {
-        height: 150px;
-    }
+  .adventure-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  
+  .hero {
+    height: 400px;
+  }
+  
+  /* Contact Page Mobile */
+  .contact-info,
+  .contact-form {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+  
+  .employee-profiles img {
+    height: 150px;
+  }
 }
