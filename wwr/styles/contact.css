@@ -296,6 +296,7 @@ footer nav.socialmedia img {
   width: 100%;
 }
 
+/* Google Map iframe styles - NO INLINE STYLES */
 .google-map {
   width: 100%;
   height: 300px;
